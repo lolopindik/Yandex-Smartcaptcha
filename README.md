@@ -1,16 +1,9 @@
-# avs_test
+<h1>Yandex-Smartcaptcha<h1>
 
-A new Flutter project.
+<h3>Testing Yandex captcha without normal layout, purely captcha functionality<h3>
 
-## Getting Started
+![image](https://github.com/lolopindik/Yandex-Smartcaptcha/assets/136455904/0dc309d1-78ff-4f0f-84b2-5651eec23197)
 
-This project is a starting point for a Flutter application.
+![image](https://github.com/lolopindik/Yandex-Smartcaptcha/assets/136455904/c62a7496-2709-49d5-8569-7651ead16abb)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/lolopindik/Yandex-Smartcaptcha/assets/136455904/624ebfee-11a7-4e1c-8762-64402ec3631f)
