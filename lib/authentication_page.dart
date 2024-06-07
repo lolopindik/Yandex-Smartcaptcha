@@ -99,32 +99,34 @@ class _AuthenticationState extends State<Authentication> {
                   child: Align(
                     alignment: Alignment.bottomCenter,
                     child: SizedBox(
-                      height: 120,
-                      child: YandexSmartCaptcha(
-                        captchaConfig: captchaConfig,
-                        onLoadWidget: const Center(
-                          child: Center(
-                            child: SizedBox(
-                              height: 20,
-                              width: 20,
-                              child: CircularProgressIndicator(),
+                      height: 400,
+                      child: Flexible(
+                        child: YandexSmartCaptcha(
+                          captchaConfig: captchaConfig,
+                          onLoadWidget: const Center(
+                            child: Center(
+                              child: SizedBox(
+                                height: 20,
+                                width: 20,
+                                child: CircularProgressIndicator(),
+                              ),
                             ),
                           ),
+                          controller: _controller,
+                          challengeViewCloseCallback: () {
+                            debugPrint('call: challengeViewCloseCallback');
+                          },
+                          challengeViewOpenCallback: () {
+                            debugPrint('call: challengeViewOpenCallback');
+                          },
+                          networkErrorCallback: () {
+                            debugPrint('call: networkErrorCallback');
+                          },
+                          tokenResultCallback: _handleTokenResult,
+                          shouldOpenPolicy: (String urlPolicy) {
+                            return !urlPolicy.contains('smartcaptcha_notice');
+                          },
                         ),
-                        controller: _controller,
-                        challengeViewCloseCallback: () {
-                          debugPrint('call: challengeViewCloseCallback');
-                        },
-                        challengeViewOpenCallback: () {
-                          debugPrint('call: challengeViewOpenCallback');
-                        },
-                        networkErrorCallback: () {
-                          debugPrint('call: networkErrorCallback');
-                        },
-                        tokenResultCallback: _handleTokenResult,
-                        shouldOpenPolicy: (String urlPolicy) {
-                          return !urlPolicy.contains('smartcaptcha_notice');
-                        },
                       ),
                     ),
                   ),
